@@ -1,8 +1,8 @@
 # Amigo secreto
 El objetivo de esta pagina web es:<br> 
-poder ingresar a todo tu grupo de amigos,<br>
-luego listarlos <br>
-y después hacer el sorteo.<br>
+1. Poder ingresar a todo tu grupo de amigos<br>
+2. Listar a los que vayas agregando <br>
+3. Hacer el sorteo<br>
 
 Para esto debes:<br> 
 1. Ingresar los nombres 1 por 1 en la caja de texto<br>
