@@ -22,12 +22,25 @@ function mostrarAmigos() {
 function agregarAmigo() {
     // Se obtiene el valor del input amigo
     const amigo = document.getElementById('amigo').value;
-    // Se agrega el amigo a la lista
-    amigos.push(amigo);
-    // Se limpia el input
-    document.getElementById('amigo').value = "";
-    // Se muestra la lista de amigos
-    mostrarAmigos();
+    // Se valida que el input no esté vacío
+    if (amigo === "") {
+        alert("Por favor ingrese un amigo, el campo de texto no puede estar vacío");
+        return;
+    } else {
+        // Se valida que el amigo no esté en la lista
+        if (amigos.includes(amigo)) {
+            alert("El amigo ya está en la lista");
+            return;
+        } else {
+            // Se agrega el amigo a la lista
+            amigos.push(amigo);
+            // Se limpia el input
+            document.getElementById('amigo').value = "";
+            // Se muestra la lista de amigos
+            mostrarAmigos();
+        }
+    }
+   
 }
 
 // Función que se encarga de sortear un amigo
@@ -46,10 +59,9 @@ function sortearAmigo() {
     li.textContent = amigoSorteado;
     // Se agrega el li al ul
     listaHTML.appendChild(li);
-
-    // Eliminar lista de amigos
-    amigos = [];
-    // Se muestra la lista de amigos vacia
+    //Se borra de la lista el amigo seleccionado
+    amigos.splice(numeroAleatorio, 1);
+    // Se muestra la lista de amigos actualizada
     mostrarAmigos();
 
 }
