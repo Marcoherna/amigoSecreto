@@ -1,2 +1,2 @@
 # Amigo secreto
-d
+Esta página es para ...
